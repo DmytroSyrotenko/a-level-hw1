@@ -1,4 +1,4 @@
-package HW3;
+package ua.syrotenko.hw3;
 
 import java.util.Scanner;
 

@@ -1,4 +1,4 @@
-package HW1;
+package ua.syrotenko.hw1;
 
 import java.time.LocalDateTime;
 

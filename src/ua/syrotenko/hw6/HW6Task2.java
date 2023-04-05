@@ -1,4 +1,4 @@
-package HW6;
+package ua.syrotenko.hw6;
 
 import java.util.Arrays;
 

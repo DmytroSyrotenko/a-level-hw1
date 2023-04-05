@@ -1,4 +1,4 @@
-package HW2;
+package ua.syrotenko.hw2;
 
 public class HW2Task4 {
     /*

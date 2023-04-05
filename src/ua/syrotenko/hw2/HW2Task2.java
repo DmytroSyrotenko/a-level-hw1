@@ -1,4 +1,4 @@
-package HW2;
+package ua.syrotenko.hw2;
 
 public class HW2Task2 {
     /*Заданы плоские декартовы координаты треугольника. Например A(1, 5), B(3, 5), C(6, 7)

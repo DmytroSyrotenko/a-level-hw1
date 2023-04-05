@@ -1,4 +1,4 @@
-package HW4;
+package ua.syrotenko.hw4;
 
 import java.util.Arrays;
 import java.util.concurrent.ThreadLocalRandom;
