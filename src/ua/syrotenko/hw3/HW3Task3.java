@@ -24,15 +24,13 @@ public class HW3Task3 {
 
     public static String wordCounter(String text) {
 
-        String noSpaces = text.replaceAll("  ", " ");
+        String firstLastSpaceDel = text.trim();
+        String noSpaces = firstLastSpaceDel.replaceAll("  ", " ");
 
         int counter = 1;
-        char symbol = '\s';
 
         for (int i = 0; i < noSpaces.length(); i++) {
-            if (noSpaces.charAt(i) != symbol) {
-                continue;
-            } else {
+            if (noSpaces.charAt(i) == '\s') {
                 counter++;
             }
         }
