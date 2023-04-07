@@ -34,25 +34,26 @@ public class HW4Task2 {
     public static int simpleNumbersCheck(int[] arr) {
 
         int counter = 0;
-        int[] otobrannieChisla = new int[arr.length];
+        int[] selectedNumbers = new int[arr.length];
 
         for (int i = 0; i < arr.length; i++) {
+            if (arr[i] == 2 || arr[i] == 3) {
+                counter++;
+                selectedNumbers[i] = arr[i];
+            }
             for (int j = 2; j <= Math.floor(Math.sqrt(arr[i])); j++)
                 if ((double) arr[i] % j == 0) {
                     break;
                 } else if (j == Math.floor(Math.sqrt(arr[i]))) {
                     counter++;
-                    otobrannieChisla[i] = arr[i];
+                    selectedNumbers[i] = arr[i];
                     break;
                 } else {
 
                 }
         }
-        Arrays.sort(otobrannieChisla);
-        System.out.println(Arrays.toString(otobrannieChisla));
+        Arrays.sort(selectedNumbers);
+        System.out.println(Arrays.toString(selectedNumbers));
         return counter;
     }
 }
-
-//// не хватает чисел 2 и 3 поскольку они не заходят в цикл из за j=2 и корня.Остальніе работают правильно
-////вставить сначала в if -будет работать но затратно.дописать второй elseif тоже можно ,но тоже кривое
