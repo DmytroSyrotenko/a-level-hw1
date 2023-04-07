@@ -34,24 +34,17 @@ public class HW4Task3 {
     public static int notSimpleNumbersCheck(int[] arr) {
 
         int counter = 0;
-        int[] selectedNumbers = new int[arr.length];
 
         for (int i = 0; i < arr.length; i++) {
             if (arr[i] == 1) {
                 counter++;
-                selectedNumbers[i] = arr[i];
             }
             for (int j = 2; j < arr[i]; j++)
                 if (arr[i] % j == 0) {
                     counter++;
-                    selectedNumbers[i] = arr[i];
                     break;
-                } else {
-
                 }
         }
-        Arrays.sort(selectedNumbers);
-        System.out.println(Arrays.toString(selectedNumbers));
         return counter;
     }
 }
