@@ -6,16 +6,15 @@ public class HW2Task3 {
      Задания 2, 3, 4 предполагают наличие метода main() и метода, который выполняет задание.*/
     public static void main(String[] args) {
 
-        EvenOdd(99);
+        evenOdd(99);
     }
 
-    public static int EvenOdd(int number) {
+    public static void evenOdd(int number) {
 
         if (number % 2 == 0) {
-            System.out.println("Chet");
+            System.out.println(number + " is Chet");
         } else {
-            System.out.println("Nechet");
+            System.out.println(number + " is Nechet");
         }
-        return number;
     }
 }
