@@ -10,10 +10,10 @@ public class HW5Task2 {
      */
 
     public static void main(String[] args) {
-        int[] fromTenToZero = {10,9,8,7,6,5,4,3,2,1,0};
+        int[] fromTenToZero = {10, 9, 9, 7, 6, 5, 4, 3, 2, 1, 0};
 
         System.out.println(Arrays.toString(fromTenToZero));
-        System.out.println("Array sorted from largest to smallest numbers: "+isSortedFromLargeToSmall(fromTenToZero));
+        System.out.println("Array sorted from largest to smallest numbers: " + isSortedFromLargeToSmall(fromTenToZero));
     }
 
     public static boolean isSortedFromLargeToSmall(int[] array) {
@@ -22,14 +22,12 @@ public class HW5Task2 {
 
         for (int i = 0; i < array.length; i++) {
             if (i != array.length - 1) {
-                if (array[i + 1] < array[i]) {
-                } else {
+                if (array[i + 1] > array[i]) {
                     isSorted = false;
                     break;
                 }
             } else {
-                if (array[i] < array[i - 1]) {
-                } else {
+                if (array[i] > array[i - 1]) {
                     isSorted = false;
                     break;
                 }
@@ -38,3 +36,5 @@ public class HW5Task2 {
         return isSorted;
     }
 }
+
+

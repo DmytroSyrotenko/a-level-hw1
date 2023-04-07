@@ -20,9 +20,9 @@ public class HW5Task3 {
         System.out.println("Transformed array :" + Arrays.deepToString(stringsToRows(array)));
     }
 
-    public static int[][] stringsToRows(int[][] array) {
+    public static int[][] stringsToRows(int[][] array ) {
 
-        int[][] newArray = new int[3][3];
+        int[][] newArray = new int[array.length][array.length];
 
         for (int i = 0; i < array.length; i++) {
             for (int j = 0; j < array[i].length; j++) {
