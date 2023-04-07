@@ -16,7 +16,7 @@ public class HW3Task2 {
         System.out.println("Enter a word for check");
         String text = new Scanner(System.in).nextLine();
 
-        System.out.println(palindromeOrNot(replaceSpaces(text)));
+        System.out.println(isPalindrome(replaceSpaces(text)));
     }
 
     public static String replaceSpaces(String text) {
@@ -25,27 +25,22 @@ public class HW3Task2 {
         return noSpaceText;
     }
 
-    public static String palindromeOrNot(String noSpaceText) {
+    public static boolean isPalindrome(String noSpaceText) {
 
         String reverse = "";
         for (int i = 0; i < noSpaceText.length(); i++) {
             reverse = noSpaceText.charAt(i) + reverse;
         }
 
-        int counter = 0;
+        boolean counter = true;
         for (int i = 0; i < reverse.length(); i++) {
             if ((noSpaceText.charAt(i)) == reverse.charAt(i)) {
-                counter++;
             } else {
+                counter = false;
                 break;
             }
         }
-
-        if (counter == noSpaceText.length()) {
-            return "This line is Palindrome";
-        } else {
-            return "This line is Not Palindrome";
-        }
+        return counter;
     }
 }
 
