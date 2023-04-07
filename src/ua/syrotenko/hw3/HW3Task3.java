@@ -25,7 +25,7 @@ public class HW3Task3 {
     public static String wordCounter(String text) {
 
         String firstLastSpaceDel = text.trim();
-        String noSpaces = firstLastSpaceDel.replaceAll("  ", " ");
+        String noSpaces = firstLastSpaceDel.replaceAll("\\s{2,}", " ");
 
         int counter = 1;
 
