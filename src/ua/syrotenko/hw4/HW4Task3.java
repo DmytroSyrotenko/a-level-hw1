@@ -16,7 +16,7 @@ public class HW4Task3 {
 
         int[] randomizedMassive = newMassiveAndRandom(arraySize);
 
-        System.out.println("Количество простіх чисел в массиве = " + simpleNumbersCheck(randomizedMassive));
+        System.out.println("Количество составніх чисел в массиве = " + notSimpleNumbersCheck(randomizedMassive));
     }
 
     public static int[] newMassiveAndRandom(int arraySize) {
@@ -31,24 +31,27 @@ public class HW4Task3 {
     }
 
 
-    public static int simpleNumbersCheck(int[] arr) {
+    public static int notSimpleNumbersCheck(int[] arr) {
 
         int counter = 0;
-        int[] otobrannieChisla = new int[arr.length];
+        int[] selectedNumbers = new int[arr.length];
 
         for (int i = 0; i < arr.length; i++) {
+            if (arr[i] == 1) {
+                counter++;
+                selectedNumbers[i] = arr[i];
+            }
             for (int j = 2; j < arr[i]; j++)
                 if (arr[i] % j == 0) {
                     counter++;
-                    otobrannieChisla[i] = arr[i];
+                    selectedNumbers[i] = arr[i];
                     break;
                 } else {
 
                 }
         }
-        Arrays.sort(otobrannieChisla);
-        System.out.println(Arrays.toString(otobrannieChisla));
+        Arrays.sort(selectedNumbers);
+        System.out.println(Arrays.toString(selectedNumbers));
         return counter;
     }
 }
-//// та же проблема с числом 1 которую можно решить криво-доп условием?
