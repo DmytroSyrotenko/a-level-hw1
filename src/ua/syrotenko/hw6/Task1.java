@@ -23,8 +23,8 @@ public class Task1 {
     public static void main(String[] args) {
 
         Phone nokia3310 = new Phone("0502845612", "Nokia 3310", 665);
-        Phone iPhone12 = new Phone("0984561245", "iPhone 12");
-        Phone lenovo = new Phone();
+        Phone iPhone12 = new Phone("0984561245", "iPhone 12",546.7);
+        Phone lenovo = new Phone("0661234565","A11",456);
 
 
         System.out.println(nokia3310);

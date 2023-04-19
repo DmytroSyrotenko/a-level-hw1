@@ -32,7 +32,7 @@ public class Phone {
         return this.number;
     }
 
-    public Phone(String number, String model, int weight) {
+    public Phone(String number, String model, double weight) {
         this.number = number;
         this.model = model;
         this.weight = weight;
@@ -48,6 +48,7 @@ public class Phone {
     public Phone() {
 
     }
+
 
 
     @Override
