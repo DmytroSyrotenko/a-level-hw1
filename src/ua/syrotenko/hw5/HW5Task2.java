@@ -10,7 +10,7 @@ public class HW5Task2 {
      */
 
     public static void main(String[] args) {
-        int[] fromTenToZero = {10, 9, 9, 7, 6, 5, 4, 3, 2, 1, 0};
+        int[] fromTenToZero = {10, 6, 4, 3, 2, 1, 9};
 
         System.out.println(Arrays.toString(fromTenToZero));
         System.out.println("Array sorted from largest to smallest numbers: " + isSortedFromLargeToSmall(fromTenToZero));
