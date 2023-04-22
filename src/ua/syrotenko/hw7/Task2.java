@@ -24,15 +24,15 @@ public class Task2 {
         Vector vectorA = new Vector(20, -3, 12);
         Vector vectorB = new Vector(14, 6, 8);
 
-        System.out.println("б) длинна вектора= " + vectorA.vectorLength(vectorA));
+        System.out.println("б) длинна вектора= " + vectorA.vectorLength());
 
-        System.out.println("в) векторное произведение= " + vectorA.vectorProduct(vectorA, vectorB));
+        System.out.println("в) векторное произведение= " + vectorA.vectorProduct(vectorB));
 
-        System.out.println("г) косинус угла между векторами= " + vectorA.cosOfTheAngleBetweenVectors(vectorA, vectorB));
+        System.out.println("г) косинус угла между векторами= " + vectorA.cosOfTheAngleBetweenVectors(vectorB));
 
-        System.out.println("д) сумма векторов= " + vectorA.sumOfVectors(vectorA, vectorB));
+        System.out.println("д) сумма векторов= " + vectorA.sumOfVectors(vectorB));
 
-        System.out.println("д) разность векторов= " + vectorA.differenceOfVectors(vectorA, vectorB));
+        System.out.println("д) разность векторов= " + vectorA.differenceOfVectors(vectorB));
 
         System.out.println("е) массив случайніх векторов= " + Arrays.toString(Vector.randomVectorsInArray(3)));
 

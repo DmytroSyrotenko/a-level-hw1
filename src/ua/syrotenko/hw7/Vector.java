@@ -16,7 +16,7 @@ public class Vector {
 
     }
 
-    public double vectorLength(Vector obj) {
+    public double vectorLength() {
 
         double vl = Math.sqrt((this.x * this.x) + (this.y * this.y) + (this.z * this.z));
         return vl;
@@ -32,38 +32,38 @@ public class Vector {
                 '}';
     }
 
-    public Vector vectorProduct(Vector a, Vector b) {
+    public Vector vectorProduct(Vector other) {
 
-        double i = (a.y * b.z) - (a.z * b.y);
-        double j = -((a.x * b.z) - (a.z * b.x));
-        double k = (a.x * b.y) - (a.y * b.x);
+        double i = (this.y * other.z) - (this.z * other.y);
+        double j = -((this.x * other.z) - (this.z * other.x));
+        double k = (this.x * other.y) - (this.y * other.x);
 
         return new Vector(i, j, k);
 
 
     }
 
-    public double cosOfTheAngleBetweenVectors(Vector a, Vector b) {
+    public double cosOfTheAngleBetweenVectors(Vector other) {
         double power = 2;
-        double cosOfAngle = ((a.x * b.x) + (a.y * b.y) + (a.z * b.z)) /
-                (Math.sqrt(Math.pow(a.x, power) + Math.pow(a.y, power) + Math.pow(a.z, power)) *
-                        Math.sqrt((b.x * b.x) + (b.y * b.y) + (b.z * b.z)));
+        double cosOfAngle = ((this.x * other.x) + (this.y * other.y) + (this.z * other.z)) /
+                (Math.sqrt(Math.pow(this.x, power) + Math.pow(this.y, power) + Math.pow(this.z, power)) *
+                        Math.sqrt((other.x * other.x) + (other.y * other.y) + (other.z * other.z)));
         ////// просто написал двумя разніми способами-через pow или умножением на себя.
         return cosOfAngle;
     }
 
-    public Vector sumOfVectors(Vector a, Vector b) {
-        double i = a.x + b.x;
-        double j = a.y + b.y;
-        double k = a.z + b.z;
+    public Vector sumOfVectors(Vector other) {
+        double i = this.x + other.x;
+        double j = this.y + other.y;
+        double k = this.z + other.z;
 
         return new Vector(i, j, k);
     }
 
-    public Vector differenceOfVectors(Vector a, Vector b) {
-        double i = a.x - b.x;
-        double j = a.y - b.y;
-        double k = a.z - b.z;
+    public Vector differenceOfVectors( Vector other) {
+        double i = this.x - other.x;
+        double j = this.y - other.y;
+        double k = this.z - other.z;
 
         return new Vector(i, j, k);
     }
